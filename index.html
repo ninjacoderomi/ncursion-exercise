@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualize Pattern</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Visualize Pattern</h1>
+    <header>
+        <form class="settings-form" id="settings-form">
+            <fieldset>
+                <label for="points-to-generate">Points to Generate before deeming function bounded</label>
+                <input type="number" id="points-to-generate" name="points-to-generate" value="100" min="10" max="10000" step="10" />
+            </fieldset>
+            <fieldset>
+                <label for="threshold" id="threshold_label">Threshold: 2</label><sub>(If Z grows beyond this value, it is considered unbounded)</sub>
+                <input type="range" id="threshold" name="threshold" value="2" min="1" max="2" step="0.01" />
+            </fieldset>
+            <fieldset>
+                <label for="color">Bounded Color</label>
+                <input type="color" id="bounded_color" name="bounded_color" value="#000000" />
+                <label for="color">Unbounded Color</label>
+                <input type="color" id="unbounded_color" name="unbounded_color" value="#ffffff" />
+            </fieldset>
+            <button>Render</button>
+            </form>
+    </header>
+    <div class="visualization-container">
+    <canvas id="canvas-visualization"></canvas>
+    </div>
+    <script src="./main.js" ></script>
+</body>
+</html>
